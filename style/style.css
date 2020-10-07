@@ -20,6 +20,11 @@
   --very-dark-desaturated-violet: hsl(271, 36%, 24%);
   --very-light-magenta: hsl(289, 100%, 72%);
   /*Typography*/
-  --bosy-copy: 16px;
+  --body-copy: 16px;
   --font-family: "Rubik", sans-serif;
+}
+body {
+  font-size: var(--body-copy);
+  font-family: var(--font-family);
+  background-color: var(--light-grayish-violet);
 }
