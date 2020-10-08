@@ -13,7 +13,7 @@
   --text-color--dark-grayish-violet: hsl(270, 7%, 64%);
   /*Gradients*/
   --light-magenta: hsl(293, 100%, 63%);
-  --light-violet: -hsl(264, 100%, 61%);
+  --light-violet: hsl(264, 100%, 61%);
   /*Secondary*/
   --white: hsl(0, 0%, 100%);
   --light-grayish-violet: hsl(270, 20%, 96%);
@@ -48,11 +48,14 @@ img {
 }
 /*Card UI Styles*/
 .user-profile {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid var(--white);
+  position: relative;
+  margin-bottom: 10px;
+  margin-left: 22px;
 }
 .chat-images {
   width: 50px;
@@ -62,7 +65,7 @@ img {
 }
 .card-ui {
   width: 260px;
-  height: 425px;
+  height: 445px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,14 +75,15 @@ img {
   position: relative;
   margin-top: 55px;
   background-color: var(--light-grayish-violet);
+  overflow: hidden;
 }
 .card-ui::after {
   content: " ";
   position: absolute;
-  width: 190px;
+  width: 150px;
   height: 33px;
   background-color: var(--white);
-  top: -9px;
+  top: -12px;
   border-radius: 15px;
 }
 .chat-images-box {
@@ -91,11 +95,47 @@ img {
 }
 .app-header {
   width: 100%;
-  height: 65px;
+  height: 74px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(var(--light-magenta) to var(--light-violet));
+  align-items: flex-end;
+  background: linear-gradient(
+    to right,
+    var(--light-violet),
+    var(--light-magenta)
+  );
+  border-radius: 10px;
+}
+.app-menu {
+  justify-self: flex-start;
+}
+.dot {
+  height: 3px;
+  width: 3px;
+  background-color: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 10px;
+  top: -26px;
+  left: 68px;
+}
+.dot::after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  background-color: var(--white);
+  border-radius: 50%;
+  top: 16px;
+}
+.dot::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  background-color: var(--white);
+  border-radius: 50%;
+  top: 8px;
 }
 .content-copy-container {
   width: 300px;
@@ -123,4 +163,55 @@ img {
 }
 .user-status {
   color: var(--text-color-pale-violet);
+  font-size: 0.6em;
+  margin-top: 2px;
+}
+.user-name {
+  color: var(--white);
+  font-size: 0.8em;
+}
+.user-content {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+.type-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7px;
+}
+.type-bar-input {
+  border-radius: 25px;
+  outline: none;
+  border-color: transparent;
+  padding: 5px 32px;
+  font-size: 0.8em;
+}
+.chat-box {
+  width: 60%;
+  height: 67px;
+  font-size: 0.5em;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chat-bubble {
+  background-color: var(--text-color--dark-grayish-violet);
+  border: 1px solid red;
+  border-radius: 4px;
+  width: 100%;
+  height: 46%;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select-btn {
+  width: 100%;
+  height: 50%;
+  background: burlywood;
 }
