@@ -38,6 +38,24 @@ img {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.main::before {
+  content: " ";
+  position: absolute;
+  height: 90vh;
+  width: 330px;
+  background: linear-gradient(
+    to bottom,
+    var(--light-magenta),
+    var(--light-violet)
+  );
+  border-bottom-left-radius: 160px;
+  border-bottom-right-radius: 160px;
+  z-index: 1;
+  top: 0;
+  left: -12px;
 }
 .header {
   width: 90vw;
@@ -45,6 +63,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 /*Card UI Styles*/
 .user-profile {
